@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Handlee&display=swap");
+body {
+  background: #50759b;
+  overflow: hidden;
+}
+
+.contentWrap{
+  position: absolute;
+  top: 51%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform-style: preserve-3d; 
+  perspective: 800px;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.contentWrap.active{
+  visibility: visible;
+  opacity: 1;
+}
+
+.contentWrap .front {
+  position: relative;
+  width: 400px;
+  height: 250px;
+  background: #10264a;
+  transform: rotateX(-10deg);
+  transform-origin: bottom center;
+  transform-style: preserve-3d;
+  perspective: 800px;
+  border-radius: 10px 10px 0 0;
+}
+
+
+.contentWrap .back {
+  position: relative;
+  width: 400px;
+  height: 200px;
+  background: linear-gradient(180deg, #d8d8d8, #fff);
+  border-radius: 0 0 10px 10px;
+  transform: rotateX(70deg);
+  transform-origin: top center;
+  transform-style: preserve-3d;
+  perspective: 800px;
+}
